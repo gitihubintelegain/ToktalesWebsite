@@ -1,0 +1,29 @@
+TOKTALES WEBSITE — VERSION 4 FOUNDER REVIEW
+Updated 19 October 2026
+
+HOW TO VIEW
+1. Download and extract the whole ZIP into a folder.
+2. Open index.html in Chrome, Edge or Safari.
+3. Use the website links to review all pages. Keep the assets and api folders alongside the HTML files.
+An internet connection is helpful for fonts and external YouTube / LinkedIn links.
+
+WHAT TO REVIEW
+- Home page appearance, logo, headline and audience bylines.
+- Tourism, Hotels, Corporates, Schools, Families and Cinema / Experience content.
+- Founder biography and choice of photographs.
+- Consultation form fields and wording.
+- Company credit and contact address: hello@toktales.com.
+
+CONSULTATION FORM
+This review copy includes the complete form and server code. Opening the HTML files directly lets you review its layout and fields, but CAPTCHA and email submission require PHP hosting with mail configured. No enquiry is sent when reviewing files directly. CONSULTATION-SETUP.txt explains the server setup.
+
+FEEDBACK
+Please note the page name, the wording or image you want changed, and your suggested replacement. This is a review package; it has not been published to toktales.com.
+
+VERSION 4 CHANGES
+- Removed the View the StoryFest programme link from the founder page.
+- Corrected Sang Kancil.
+- Added Create a story with us beside Start with your brief on the schools page, linked to the consultation form.
+
+SOCIAL LINKS UPDATE
+YouTube and Instagram links now appear below both home-page consultation links. Instagram is also included in Stay curious on every page and Connect with Gauraangi on the founder page.

@@ -1,0 +1,27 @@
+TOKTALES CONSULTATION FORM — SERVER SETUP
+
+Upload the HTML, CSS, JavaScript, assets and complete api folder to the website root.
+Requirements: PHP 8.2 or newer, sessions, GD image extension, a writable system temporary directory, HTTPS, and outbound mail support.
+Keep PHP updated. The api PHP files must be executed by the server, never served as downloadable text.
+
+The recipient is fixed at hello@toktales.com. Visitors cannot choose a mail recipient.
+Default delivery uses the host's configured PHP mail() service. Ask the host to enable sending from hello@toktales.com and authenticate the domain with SPF/DKIM.
+For authenticated SMTP (recommended), configure these SERVER environment variables:
+TOKTALES_MAIL_FROM = hello@toktales.com (or an authorised sender)
+TOKTALES_SMTP_HOST = your host's SMTP hostname
+TOKTALES_SMTP_PORT = 587 (STARTTLS) or 465 (implicit TLS)
+TOKTALES_SMTP_SECURITY = tls or ssl
+TOKTALES_SMTP_USER = your SMTP account
+TOKTALES_SMTP_PASSWORD = your SMTP password
+Do not enter passwords in HTML/JavaScript or upload them in a publicly readable file. Use your host's environment/secret settings. PHPMailer 7.1.1 and its licence are included.
+
+The image CAPTCHA uses no third-party account or API keys. Codes expire after 10 minutes and are single use. Answer validation, required fields, allowed segments, consent, CSRF token, a honeypot and rate limiting are enforced on the server.
+For higher-volume public campaigns, consider upgrading to a managed CAPTCHA and edge rate limiting with the selected host.
+Session cookies are HttpOnly and SameSite=Lax; serve production through HTTPS. Configure the reverse proxy/PHP HTTPS setting correctly so cookies are Secure.
+Only hashed network identifiers and attempt times are held in temporary rate-limit files. Requests do not create an enquiry database. Mailboxes and host logs are managed by their providers.
+
+After deployment: complete one valid enquiry, confirm it reaches hello@toktales.com, check Reply-To, and check invalid CAPTCHA rejection. Check the spam folder too. The success message means the mail service accepted the message for delivery; it is not a guarantee of inbox delivery.
+If the service fails, the form shows an error and retains visitor input. It never shows a fake thank-you message.
+
+The local preview includes CAPTCHA, but actual email sending needs the live host's mail configuration. QA captures test emails locally and sends no test email to TokTales.
+Do not deploy build scripts, preview servers, review folders or portable test runtimes.

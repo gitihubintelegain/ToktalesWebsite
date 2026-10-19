@@ -1,0 +1,1 @@
+Upload these website files and the complete assets and api folders to the root of toktales.com. Read CONSULTATION-SETUP.txt before enabling live enquiries. PHP hosting and configured outbound mail are required. This package replaces the previous draft-only contact form.

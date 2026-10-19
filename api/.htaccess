@@ -1,0 +1,4 @@
+Options -Indexes
+<FilesMatch "^(common\.php|.*\.(cjs|json|log|ini|env))$">
+  Require all denied
+</FilesMatch>
